@@ -77,8 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let firstBalSubmitted = false;
     let gameIsRunning = false;
+    const startingBalArea = document.getElementsByClassName('starting-bal-area');
+    const container = document.getElementsByClassName('container');
     const submitStartingBalButton = document.getElementById('submitBalance');
-    const balElement = document.getElementById('startingBal');
+    const startingBalAmount = document.getElementById('startingBal');
+    const balElement = document.getElementById('balance');
     const betElement = document.getElementById('bet-amount');
     const mineElement = document.getElementById('mine-amount');
     const profitArea = document.getElementsByClassName('profit-area');
@@ -101,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentProfit = 0;
     let currentMinesClicked = 0;
 
+    startingBalArea[0].classList.add('animate__animated', 'animate__zoomInDown');
+
     const generateBombs = () => {
         for (let i = 0; i < currentMineTotal; i++) {
             const randomIndex = Math.floor(Math.random() * mines.length);
@@ -114,13 +119,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     submitStartingBalButton.onclick = (event) => {
         if (firstBalSubmitted) return;
-        bal = balElement.value;
+        bal = parseFloat(startingBalAmount.value);
+        balElement.textContent = parseFloat(bal).toFixed(2);
         if (bal === '') return;
 
         firstBalSubmitted = true;
-        balElement.disabled = true;
-        betElement.readOnly = false;
-        submitStartingBalButton.style.display = 'none';
+        startingBalArea[0].classList.remove('animate__zoomInDown');
+        startingBalArea[0].classList.add('animate__zoomOut');
+        startingBalArea[0].addEventListener('animationend', function() {
+            startingBalArea[0].style.display = 'None'; 
+            startingBalArea[0].classList.remove('animate__zoomOut');
+            container[0].style.display = 'flex';
+            container[0].classList.add('animate__animated', 'animate__backInDown');
+        }, { once: true });
     }
 
     const endGame = () => {
@@ -147,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mineElement.disabled = true;
             gameIsRunning = true;
             bal -= currentBet;
-            balElement.value = bal.toFixed(2);
+            balElement.textContent = bal.toFixed(2);
             popup[0].style.display = 'none';
             mines.forEach(mine => {
                 mine.classList.remove('bomb');
@@ -164,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             if (currentMinesClicked == 0) return;
             bal += currentProfit;
-            balElement.value = bal.toFixed(2);
+            balElement.textContent = bal.toFixed(2);
             multiplier = payouts[currentMineTotal - 1][currentMinesClicked - 1];
             popup[0].style.display = 'flex';
             popupMulti.textContent = String(multiplier) + "x";

@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    display: flex;
+    display: none;
     justify-content: space-between;
     height: 80vh;
     width: 1000px;
@@ -112,38 +112,40 @@ body {
 
 .starting-bal-area {
     background-color: #1a2c38;
-    height: 60px;
+    height: 80px;
     width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 14px;
-    left: 50%;
-    transform: translateX(-50%);
     margin-bottom: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #ffffff;
 }
 
 .starting-bal-area .dollar-sign {
     color: white;
     font-size: 14;
     margin-right: 5px;
+    position: absolute;
+    transform: translateX(-100px);
 }
 
 .starting-bal-area input {
+    box-sizing: border-box;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
     font-size: 14px;
     margin-right: 0px;
     border: 0;
     background-color: #0f212e;
-    text-align: center;
+    text-align: left;
+    text-indent: 10px;
     color: white;
 }
 
 .starting-bal-area input::placeholder {
+    text-align: left;
     color: #fff;
     opacity: 0.5;
 }
@@ -158,9 +160,9 @@ body {
 }
 
 .input-area p{
+    margin-top: 10px;
     margin-left: 10px;
     color: #9da6c0;
-    margin-bottom: 5px;
 }
 
 .money-enter {
@@ -258,6 +260,24 @@ body {
     height: 15px;
     transform: translateX(-20px);
     margin-right: -20px;
+}
+
+.balance-area {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e2c37;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.balance-area #prefix {
+    margin-right: 5px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
