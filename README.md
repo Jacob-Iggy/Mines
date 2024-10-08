@@ -33,6 +33,10 @@ Mines is an exciting game that combines strategy and luck. Players enter a bet a
   
 - **Animations:** Implemented CSS transitions to enhance the visual appeal of the game, making the experience engaging and enjoyable.
 
+## Play the Game
+
+You can play the game directly at [jacob-iggy.github.io/Mines/](https://jacob-iggy.github.io/Mines/).
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**!
