@@ -51,7 +51,7 @@ Distributed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Contact
 
-Jacob Igielski - [email@jacobigielski@gmail.com](mailto:jacobigielski@gmail.com)
+Jacob Igielski - [jacobigielski@gmail.com](mailto:jacobigielski@gmail.com)
 
 Project Link: [https://github.com/jacob-iggy/mines](https://github.com/jacob-iggy/mines)
 
