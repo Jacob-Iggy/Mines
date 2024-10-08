@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <audio id="bomb-audio"><source src="audios/bomb.mp3" type="audio/mpeg"></audio>
+    <audio id="cashout-audio"><source src="audios/cashout.mp3" type="audio/mpeg"></audio>
+    <audio id="gem-audio"><source src="audios/gem.wav" type="audio/wav"></audio>
+    <div class="starting-bal-area">
+        <span class="dollar-sign">$</span>
+        <input type="number" placeholder="Starting-Balance" class="starting-bal" id="startingBal"></input>
+        <button type="button" id="submitBalance">Submit</button>
+    </div>
+    <div class="container">
+        <div class="input-area">
+            <p>Bet Amount</p>
+            <div class="money-enter">
+                <input type="number" placeholder="0.000000" class="bet-amount" id="bet-amount" readonly></input>
+                <img src="images/moneysign.png">
+                <button class="half-bet" id="half-button">½</button>
+                <button class="double-bet" id="double-button">2x</button>
+            </div>
+            <p>Mines</p>
+            <div class="select-area">
+                <select id="mine-amount">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                </select>
+            </div>
+            <div class="profit-area">
+                <p id="profit-text">Total Profit (1.00x)</p>
+                <input id="profit-number" type="number" class="profit" value="0.00" disabled></input>
+                <img src="images/moneysign.png">
+            </div>
+            <button class="bet-button" id="bet-button">Bet</button>
+        </div>
+        <div class="game-area">
+            <div class="box-grid">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <div class="popup">
+                    <p class="popup-multi" id="popup-multi">1.00x</p>
+                    <hr>
+                    <p class="popup-win" id="popup-win">$0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #15252f;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    width: 1000px;
+    background-color: black;
+    border: 15px solid #1e2c37;
+}
+
+.input-area {
+    width: 30%;
+    background-color: #263642;
+}
+
+.game-area {
+    width: 70%;
+    background-color: #13212d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 10px;
+    position: relative;
+}
+
+.box-grid button {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #324452;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.box-grid button:hover {
+    background-color: #405463;
+}
+
+.box-grid button img {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 41%; 
+    background-color: #1a2c38;
+    padding: 10px 30px; 
+    border-radius: 10px; 
+    text-align: center;
+    border: 2px solid #00e701;;
+    color: #00e701;
+    transition: opacity 0.5s ease;
+}
+
+.popup p {
+    margin: 0;
+    width: 100%;
+}
+
+.popup p.popup-multi {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popup hr {
+    border: 0;
+    background-color: #404e58;
+    width: 40px;
+    height: 3px;
+    margin-bottom: 5px;
+}
+
+.popup p.popup-win {
+    font-size: 14px;
+}
+
+.starting-bal-area {
+    background-color: #1a2c38;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.starting-bal-area .dollar-sign {
+    color: white;
+    font-size: 14;
+    margin-right: 5px;
+}
+
+.starting-bal-area input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    margin-right: 0px;
+    border: 0;
+    background-color: #0f212e;
+    text-align: center;
+    color: white;
+}
+
+.starting-bal-area input::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.starting-bal-area button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #1475e1;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.input-area p{
+    margin-left: 10px;
+    color: #9da6c0;
+    margin-bottom: 5px;
+}
+
+.money-enter {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.money-enter input {
+    background-color: #0f212e;
+    margin-left: 10px;
+    border: 0;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    box-shadow: 0 0 2px 2px #2f4553;
+    width: 180px;
+}
+
+.money-enter img {
+    color: white;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-20px);
+    margin-right: -20px;
+}
+
+.money-enter button {
+    background-color: #2f4553;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.select-area {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.select-area select {
+    width: 90%;
+    background-color: #0f212e;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+    box-shadow: 0 0 2px 2px #2f4553;
+}
+
+.bet-button {
+    background-color: #00e701;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    border: 0;
+    width: 90%;
+    margin-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.profit-area {
+    width: 100%;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.profit-area input {
+    width: 90%;
+    background-color: #0f212e;
+    margin-left: 10px;
+    border: 0;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    box-shadow: 0 0 2px 2px #2f4553;
+    margin-bottom: 15px;
+}
+
+.profit-area img {
+    color: white;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-20px);
+    margin-right: -20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    margin: 0; /* Reset margin */
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.75;
+}
