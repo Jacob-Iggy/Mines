@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     doubleButton.onclick = (event) => {
         if (gameIsRunning) return;
         let amount = betElement.value * 2;
-        if (amount > bal) return bal;
+        if (amount > bal) amount = bal;
         betElement.value = (amount).toFixed(2);
     }
 
