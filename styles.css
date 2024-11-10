@@ -43,7 +43,8 @@ body {
     position: relative;
     width: 90%;
     max-width: 500px;
-    height: auto;
+    height: 80%;
+    overflow: hidden;
 }
 
 .box-grid button {
