@@ -18,7 +18,7 @@ body {
     display: none;
     justify-content: space-between;
     height: 80vh;
-    width: 1000px;
+    width: 90%;
     background-color: black;
     border: 15px solid #1e2c37;
 }
@@ -38,15 +38,18 @@ body {
 
 .box-grid {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
     position: relative;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
 }
 
 .box-grid button {
     position: relative;
-    height: 100px;
-    width: 100px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: #324452;
     border-radius: 5px;
     border: none;
@@ -181,14 +184,14 @@ body {
     padding-bottom: 5px;
     padding-left: 10px;
     box-shadow: 0 0 2px 2px #2f4553;
-    width: 180px;
+    width: 40%;
 }
 
 .money-enter img {
     color: white;
     width: 15px;
     height: 15px;
-    transform: translateX(-20px);
+    transform: translate(-25px , 2px);
     margin-right: -20px;
 }
 
@@ -197,7 +200,7 @@ body {
     cursor: pointer;
     color: white;
     border: 0;
-    padding: 10px 15px;
+    padding: 5px 10px;
     margin: 0;
 }
 
@@ -282,8 +285,8 @@ body {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
-    margin: 0; /* Reset margin */
+    -webkit-appearance: none;
+    margin: 0; 
 }
 
 ::placeholder {

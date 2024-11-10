@@ -160,6 +160,8 @@ document.addEventListener('DOMContentLoaded', function () {
             bal -= currentBet;
             balElement.textContent = bal.toFixed(2);
             popup[0].style.display = 'none';
+            profitText.textContent = "Total Profit (0.00x)"
+            profitNumber.value = '0.00';
             mines.forEach(mine => {
                 mine.classList.remove('bomb');
                 mine.classList.remove('clicked');
